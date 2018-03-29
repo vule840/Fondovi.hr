@@ -71,7 +71,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<h2><a class="text-white" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
 							<div class="col-md-3">
-								<h4 class="kategorija"><?php the_category(); ?></h4>
+								<h4 class="kategorija"><?php the_category(); ?><i class="fa fa-square kvadrat_kategorije" aria-hidden="true"></i></h4>
 							</div>
 						</div>
 						
@@ -117,53 +117,240 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<!-- ****************************
 			POČETNA__2. INVESTICIJSKI FONDOVI
 		*******************************-->
-		<div class="row">
+		<div class="row" id="pocetna_investicijski">
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">INVESTICIJSKI FONDOVI</h2>
 				<!-- Tabovi -->
 				<nav>
-					<div class="nav nav-tabs" id="nav-tab" role="tablist">
-						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+					<div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Svi fondovi</a>
+						<a class="nav-item nav-link" id="nav-dionicki-tab" data-toggle="tab" href="#nav-dionicki" role="tab" aria-controls="nav-dionicki" aria-selected="false">Dionički</a>
+						<a class="nav-item nav-link" id="nav-mjesoviti-tab" data-toggle="tab" href="#nav-mjesoviti" role="tab" aria-controls="nav-mjesoviti" aria-selected="false">Mješoviti</a>
+						<a class="nav-item nav-link" id="nav-obveznicki-tab" data-toggle="tab" href="#nav-obveznicki" role="tab" aria-controls="nav-obveznicki" aria-selected="false">Obveznički</a>
+						<a class="nav-item nav-link" id="nav-novcani-tab" data-toggle="tab" href="#nav-novcani" role="tab" aria-controls="nav-novcani" aria-selected="false">Novčani</a>
 					</div>
 				</nav>
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 						<!-- TABLE -->
-						<table class="table">
+						<table class="table table-responsive w-100 d-block d-md-table">
+							<!-- Dobitnici -->
 							<thead>
 								<tr>
-									<th scope="col">#</th>
-									<th scope="col">First</th>
-									<th scope="col">Last</th>
-									<th scope="col">Handle</th>
+									<th scope="col">Dobitnici</th>
+									<th scope="col"></th>
+									<th scope="col text-center">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<th scope="row">1</th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
+									<th scope="row">KD Balanced</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>2,03%</td>
+									<td>5,31%</td>
+									<td>6,19%</td>
 								</tr>
 								<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
+									<th scope="row">KD Invest</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
 									<td>Thornton</td>
+									<td>@fat</td>
 									<td>@fat</td>
 								</tr>
 								<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
 									<td>the Bird</td>
 									<td>@twitter</td>
+									<td>@twitter</td>
 								</tr>
+							
+							</tbody>
+							<!-- Gubitnici -->
+							<thead>
+								<tr>
+									<th scope="col">Gubitnici</th>
+									<th scope="col"></th>
+									<th scope="col">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">KD Balanced</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">KD Invest</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							
 							</tbody>
 						</table>
 					</div>
-					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+					<div class="tab-pane fade" id="nav-dionicki" role="tabpanel" aria-labelledby="nav-dionicki-tab">
+						<table class="table table-responsive w-100 d-block d-md-table">
+							<!-- Dobitnici -->
+							<thead>
+								<tr>
+									<th scope="col">Dobitnici</th>
+									<th scope="col"></th>
+									<th scope="col text-center">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">KD Balanced</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>2,03%</td>
+									<td>5,31%</td>
+									<td>6,19%</td>
+								</tr>
+								<tr>
+									<th scope="row">KD Invest</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							
+							</tbody>
+							<!-- Gubitnici -->
+							<thead>
+								<tr>
+									<th scope="col">Gubitnici</th>
+									<th scope="col"></th>
+									<th scope="col">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">KD Balanced</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">KD Invest</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+					<div class="tab-pane fade" id="nav-mjesoviti" role="tabpanel" aria-labelledby="nav-mjesoviti-tab">
+						<table class="table table-responsive w-100 d-block d-md-table">
+							<!-- Dobitnici -->
+							<thead>
+								<tr>
+									<th scope="col">Dobitnici</th>
+									<th scope="col"></th>
+									<th scope="col text-center">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">KD Balanced</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>2,03%</td>
+									<td>5,31%</td>
+									<td>6,19%</td>
+								</tr>
+								<tr>
+									<th scope="row">KD Invest</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							
+							</tbody>
+							<!-- Gubitnici -->
+							<thead>
+								<tr>
+									<th scope="col">Gubitnici</th>
+									<th scope="col"></th>
+									<th scope="col">1. Mjesec</th>
+									<th scope="col">2. Mjesec</th>
+									<th scope="col">3. Mjesec</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">KD Balanced</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">KD Invest</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">ZB Euroaktiv</th>
+									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span></td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							
+							</tbody>
+						</table>
+						
+					</div>
+					<div class="tab-pane fade" id="nav-obveznicki" role="tabpanel" aria-labelledby="nav-obveznicki-tab">...</div>
+					<div class="tab-pane fade" id="nav-novcani" role="tabpanel" aria-labelledby="nav-novcani-tab">...</div>
 				</div>
 			</div>
 			<div class="col-md-4"><img src="http://via.placeholder.com/350x500" alt=""></div>
@@ -176,47 +363,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">U FOKUSU</h2>
 				
-				
-				
+					
 				<?php
 				$posts = get_posts(array(
-					'posts_per_page'	=> 1,
+					'posts_per_page'	=> 2,
 									'post_type'			=> 'post',
 				'cat' => 10
 				));
 				if( $posts ): ?>
 				
-				<div class="col-md-6">
-					
-					<?php foreach( $posts as $post ):
+				<div class="row">
+						
+					<?php foreach( $posts as $post ): 
 						
 						setup_postdata( $post );
 						
-					?>
-					
-					
-					
-					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-					<h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					
-					
-					
-					
+						?>
+						<div id="vijesti_4posta" class="col-md-6">
+							<?php the_post_thumbnail('category-thumb'); ?>	
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						
+						</div>
 					<?php endforeach; ?>
 					
 					
-					
+					</div>
 					<?php wp_reset_postdata(); ?>
 					
 					<?php endif; ?>
-				</div>
+				
 			</div>
 			<div class="col-4"><h2 class="bg-secondary trake">TEČAJNA LISTA</h2></div>
 		</div>
 		<!-- ****************************
 						POČETNA__4. VIJESTI
 		*******************************-->
-		<div class="row" id='vijesti'>
+		<div class="row" id='pocetna_vijesti'>
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">VIJESTI</h2>
 				Ovdje ide carusel-vijesti
@@ -403,4 +585,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 				</div><!-- Container end -->
 				</div><!-- Wrapper end -->
+				
 				<?php get_footer(); ?>

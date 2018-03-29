@@ -67,14 +67,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 						//echo "jh";
 						//$template = "MYTEMPLATE";
-						$image =  '<img class="pt-3" src="http://via.placeholder.com/700x100"/>';
+						$image =  '<img class="pt-3" src="http://via.placeholder.com/800x100"/>';
 						echo $image;
 
 					} ?><!-- end custom logo -->
 				
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				
 				
 			
 			<?php if ( 'container' == $container ) : ?>
@@ -84,6 +82,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<hr>
 			<div class="container">
 				<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
@@ -96,6 +97,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+				    <label>
+				        <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+				        <input type="search" class="search-field"
+				            placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+				            value="<?php echo get_search_query() ?>" name="s"
+				            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+				    </label>
+				    <input type="submit" class="search-submit"
+				        value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+				</form>
 		</nav><!-- .site-navigation -->
 			</div>
 

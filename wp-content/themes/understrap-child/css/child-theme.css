@@ -9491,6 +9491,34 @@ body {
 div#wrapper-navbar {
   background: #B7151F; }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  text-transform: uppercase; }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: white; }
+
+li.active {
+  font-weight: bold; }
+
+.table th, .table td, .table tr, .table tbody + tbody {
+  border: 0; }
+
+.table th, .table td {
+  vertical-align: middle; }
+
+.tablica_sivo {
+  background: #ECEDED; }
+
+.tablica_objave td {
+  padding: 0em 0.75em 0em 0em; }
+
+#recent-posts-3 {
+  padding: 0; }
+
+/*#vijesti_sidebar h2:first-child{
+    margin-bottom: 0;
+}*/
 .trake {
   font-size: 15px;
   padding-top: 0.5em;
@@ -9498,6 +9526,33 @@ div#wrapper-navbar {
   padding-left: 2em;
   color: #fff;
   font-weight: bold; }
+
+.kvadrat_kategorije {
+  color: #B7151F; }
+
+.single #single_post_naslov {
+  padding: 1em 0; }
+  .single #single_post_naslov h2 {
+    font-size: 1.5em; }
+  .single #single_post_naslov .kategorija {
+    font-size: 1.2em; }
+    .single #single_post_naslov .kategorija a {
+      text-transform: uppercase;
+      color: #B7151F; }
+
+.single ul.post-categories {
+  padding-right: 0.5em;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  float: left; }
+  .single ul.post-categories a {
+    text-transform: uppercase;
+    color: white; }
+
+.single .post .trake {
+  padding-bottom: 1.5rem; }
 
 .podnozje_naslova {
   position: relative;
@@ -9529,7 +9584,7 @@ div#wrapper-navbar {
 
 .pojam_dana {
   background: #ECEDED;
-  padding: 1em; }
+  padding: 2em; }
 
 .prvi {
   position: relative; }
@@ -9591,23 +9646,89 @@ div#wrapper-navbar {
       .dva .podnozje_naslova h4.kategorija ul {
         padding-left: 0; }
 
+/*********** HOME_INVESTICIJSKI-FONDOVI *******/
+#pocetna_investicijski thead {
+  background: #ECEDED;
+  padding: 1em; }
+  #pocetna_investicijski thead th {
+    padding: 1.7rem;
+    text-transform: uppercase;
+    text-align: center; }
+
+#pocetna_investicijski td {
+  text-align: center; }
+
+#pocetna_investicijski tbody th {
+  font-weight: normal; }
+
+#pocetna_investicijski tbody tr:nth-child(2) {
+  background: #ECEDED; }
+
+#pocetna_investicijski tbody .dobitni {
+  color: #41A62A; }
+
+#pocetna_investicijski tbody .gubitni {
+  color: #BE0A26; }
+
+#pocetna_investicijski tbody .fa {
+  font-size: 1.2em; }
+
+#pocetna_investicijski .nav-tabs .nav-link {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  background: #293D40;
+  margin-right: 0.3em; }
+  #pocetna_investicijski .nav-tabs .nav-link:last-child {
+    margin-right: 0; }
+
+#pocetna_investicijski .nav-tabs .nav-link.active {
+  background: #697A7B; }
+
+.investicijski_pocetni th {
+  background: white; }
+
+.investicijski_pocetni th:first-child {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  background: #293D40;
+  margin-right: 0.3em;
+  padding: 1em !important; }
+
+.widget #pocetna_investicijski .nav-tabs .nav-link {
+  margin-right: 0;
+  color: #3E3D40;
+  background: #EBECEC;
+  font-size: 0.7em;
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.widget #pocetna_investicijski h2 {
+  margin-bottom: 0; }
+
+.widget #pocetna_investicijski tbody th {
+  padding-left: 3em;
+  font-style: 0.8em; }
+
+.widget #pocetna_investicijski tbody td {
+  font-style: 0.8em; }
+
 /*********** HOME_VIJESTI *******/
-#vijesti #pojam_dana h2 {
+#pocetna_vijesti .naslov {
+  font-size: 1.2em;
+  padding-top: 1em; }
+
+#pojam_dana h2 {
   margin-bottom: 0;
   font-weight: bold;
   text-transform: uppercase; }
 
-#vijesti #pojam_dana .pojam_naslov {
+#pojam_dana .pojam_naslov {
   font-size: 1.2em; }
 
-#vijesti #pojam_dana p {
-  padding-top: 1em; }
-
-#vijesti #pojam_dana .pojam_dana {
-  padding: 2em; }
-
-#vijesti .naslov {
-  font-size: 1.2em;
+#pojam_dana p {
   padding-top: 1em; }
 
 .single-item.slick-initialized.slick-slider.slick-dotted {
@@ -9620,6 +9741,31 @@ div#wrapper-navbar {
 
 #logici .card-body {
   padding: 0.5em; }
+
+/*********** VIJESTI_4POSTA *******/
+#vijesti_4posta img {
+  padding-bottom: 1em;
+  padding-top: 1em; }
+
+#vijesti_4posta a {
+  font-size: 1.2em;
+  color: #293D40; }
+  #vijesti_4posta a:hover {
+    color: #B7151F; }
+
+.widget {
+  padding: 1em 0; }
+
+/*********** EDUKACIJA_DIONICE *******/
+.table_dionice:nth-child(1) {
+  background: #ECEDED; }
+
+/*********** DRUŠTVA ZA UPRAVLJANJE *******/
+tbody#drustva_tablica {
+  border: none; }
+  tbody#drustva_tablica td, tbody#drustva_tablica th {
+    border: none;
+    vertical-align: middle; }
 
 /*********** FOOTER *******/
 div#wrapper-footer {

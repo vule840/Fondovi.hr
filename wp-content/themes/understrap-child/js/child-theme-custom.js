@@ -1,6 +1,12 @@
 console.log("dsfsdgjhghfsd");
 
 jQuery(document).ready(function($) {
+	$(".tablica_edu").each(function(index) {
+		$(this)
+			.find("tbody:nth-child(odd)")
+			.addClass("tablica_sivo");
+	});
+
 	$(".single-item").slick({
 		dots: true,
 		autoplay: true,
