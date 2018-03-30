@@ -9789,6 +9789,9 @@ div#wrapper-footer {
   color: white; }
 
 /*********** SLICK *******/
+.slick-prev, .slick-next {
+  z-index: 10; }
+
 .slick-slide .post-categories {
   list-style-type: none; }
 
@@ -10003,7 +10006,7 @@ div#wrapper-footer {
   float: left;
   height: 100%;
   min-height: 1px;
-  padding: 1em; }
+  padding: 2em; }
 
 [dir="rtl"] .slick-slide {
   float: right; }
