@@ -22,6 +22,9 @@ li.active{
 }
 
 //NASLOVI_TRAKE_H2
+.table{
+    margin-bottom: 0;
+}
 .table th, .table td, .table tr, .table tbody + tbody{
     border:0;
 }
@@ -36,6 +39,18 @@ li.active{
 }
 #recent-posts-3{
     padding:0;
+}
+
+.saznaj_vise {
+    td{
+       padding: 0;
+    text-align: left; 
+    }
+    td.slikica{
+        width: 20%;
+    }
+    
+
 }
 
 /*#vijesti_sidebar h2:first-child{
@@ -154,6 +169,7 @@ li.active{
         position: absolute;
         bottom: 0;
         padding: 2em;
+        width: 100%;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
         background: -moz-linear-gradient(
             top,
@@ -289,9 +305,9 @@ li.active{
         th{
             font-weight: normal;
         }
-        tr:nth-child(2){
+        /*tr:nth-child(2){
             background: $siva_pojam;
-        }
+        }*/
         .dobitni{
             color: #41A62A;
         }
@@ -420,6 +436,16 @@ li.active{
         padding: 1em 0;
     }
 
+
+/*********** HOME_CARUSEL_DRUŠTVA *******/
+
+.multiple-items .card-body{
+    
+    ul{
+        list-style-type: none;
+    }
+}
+
 /*********** EDUKACIJA_DIONICE *******/
 
 .table_dionice:nth-child(1){
@@ -451,6 +477,11 @@ div#wrapper-footer {
 
 
 /*********** SLICK *******/
+
+.slick-slide .post-categories{
+    list-style-type: none;
+}
+
 
 @charset 'UTF-8';
 /* Slider */

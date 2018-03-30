@@ -18,43 +18,46 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row" id="vijesti_sidebar">
 			<div class="col-md-8">
 				<h2 class="bg-primary trake text-uppercase"><?php the_title(); ?></h2>
-				<div class="jedan">
-					<?php
-					
-					$posts = get_posts(array(
-						'posts_per_page'	=> -1,
-										'post_type'			=> 'edutehnickaanaliza'
-										
 
-					
-					));
-					if( $posts ): ?>
-					
-					<table class="table tablica_edu">
-						
-						<?php foreach( $posts as $post ):
-							
-							setup_postdata( $post );
-							
-						?>
-						
+
+				<div class="jedan">
+
+					<?php
+
+          $ourCurrentPage = get_query_var('paged');
+
+          $aboutPosts = new WP_Query(array(
+            'posts_per_page'	=> 2,
+			'post_type'			=> 'edutehnickaanaliza',
+			'order' => 'ASC',
+            'paged' => $ourCurrentPage
+          ));
+
+	          if ($aboutPosts->have_posts()) :
+	            while ($aboutPosts->have_posts()) :
+	              $aboutPosts->the_post();
+	              ?> 
+
+	              	<table class="table tablica_edu">
 						<tbody>
 							<tr>
 							<td scope="col"><h2 class="trake text-uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> </td>
 							</tr>
 						</tbody>
-					
-						
-						
-						<?php endforeach; ?>
-						
-					</table>
-					
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-				</div>
-		
+	              	</table>	
+	              <?php
+	            endwhile;
 
+	             echo paginate_links(array(
+	              'total' => $aboutPosts->max_num_pages
+	            ));
+
+	          endif;
+
+	        ?>
+
+
+				</div>
 
 			
 				

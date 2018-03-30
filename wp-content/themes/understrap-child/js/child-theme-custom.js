@@ -1,14 +1,12 @@
 console.log("dsfsdgjhghfsd");
 
 jQuery(document).ready(function($) {
-	$(".tablica_edu").each(function(index) {
-		$(this)
-			.find("tbody:nth-child(odd)")
-			.addClass("tablica_sivo");
+	$(".tablica_edu:nth-child(odd)").each(function(index) {
+		$(this).addClass("tablica_sivo");
 	});
 
 	$(".single-item").slick({
-		dots: true,
+		dots: false,
 		autoplay: true,
 		infinite: true,
 		slidesToShow: 3,
@@ -43,8 +41,8 @@ jQuery(document).ready(function($) {
 
 	$(".multiple-items").slick({
 		infinite: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		arrows: true,
 		centerPadding: "60px",
 		responsive: [

@@ -14,7 +14,7 @@
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade" id="nav-dionicki" role="tabpanel" aria-labelledby="nav-dionicki-tab">
 						<!-- TABLE -->
-						<table class="table table-responsive w-100 d-block d-md-table">
+						<table class="table table-responsive table-striped w-100 d-block d-md-table">
 							<!-- Dobitnici -->
 						
 							<tbody>
@@ -34,10 +34,6 @@
 									
 								</tr>
 							
-							</tbody>
-							<!-- Gubitnici -->
-						
-							<tbody>
 								<tr>
 									<th scope="row">KD Balanced</th>
 									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>
@@ -59,7 +55,7 @@
 					</div>
 					<div class="tab-pane fade" id="nav-mjesoviti" role="tabpanel" aria-labelledby="nav-mjesoviti-tab">
 							<!-- TABLE -->
-						<table class="table table-responsive w-100 d-block d-md-table">
+						<table class="table table-responsive table-striped w-100 d-block d-md-table">
 							<!-- Dobitnici -->
 						
 							<tbody>
@@ -77,12 +73,8 @@
 									<th scope="row">ZB Euroaktiv</th>
 									<td><span class="dobitni"><i class="fa fa-sort-asc" aria-hidden="true"></i> 1,99%</span></td>
 									
-								</tr>
-							
-							</tbody>
-							<!-- Gubitnici -->
-						
-							<tbody>
+								</tr>							
+				
 								<tr>
 									<th scope="row">KD Balanced</th>
 									<td><span class="gubitni"><i class="fa fa-sort-desc" aria-hidden="true"></i> 1,99%</span> </td>

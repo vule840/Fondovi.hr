@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$args = array(
 							'post_type' => 'post',
 							'posts_per_page' => 1,
-																		'cat' => 10
+							'cat' => 9
 						);
 						//novi query
 						$query = new WP_Query($args);
@@ -55,7 +55,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				$posts = get_posts(array(
 					'posts_per_page'	=> 4,
-					'post_type'			=> 'post'
+					'post_type'			=> 'post',
+					'cat' => 9
 				));
 
 				if( $posts ): ?>
@@ -80,8 +81,50 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endif; ?>
 
-				<h2 class="bg-primary trake mt-3">SAZNAJTE VIŠE</h2>
-			
+				<h2 class="bg-primary trake mt-3 mb-0">SAZNAJTE VIŠE</h2>
+
+					<?php
+
+		          $ourCurrentPage = get_query_var('paged');
+
+		          $aboutPosts = new WP_Query(array(
+		            'posts_per_page'	=> 3,
+					'post_type'			=> 'post',
+					'cat' => 9,
+					'order' => 'ASC',
+		            'paged' => $ourCurrentPage
+		          ));
+
+			          if ($aboutPosts->have_posts()) :
+			            while ($aboutPosts->have_posts()) :
+			              $aboutPosts->the_post();
+			              ?> 
+
+			              		<table class="table tablica_edu saznaj_vise">
+						          
+						                
+						                <tr>
+
+						                     <td class="slikica"><?php the_post_thumbnail(array(100,100,crop)); ?></td>
+						                     <td class="ml-auto"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></td>
+						                 </tr>
+						                  
+						           
+						                
+						          
+						           </table>	
+			              <?php
+			            endwhile;
+
+			             echo paginate_links(array(
+			              'total' => $aboutPosts->max_num_pages
+			            ));
+
+			          endif;
+
+			        ?>
+
+		
 				
 			</div>
 
@@ -91,6 +134,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-4">
 				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
+
+
+
+
 				
 				<?php  dynamic_sidebar('vijesti-sidebar')  ?>
 			</div>

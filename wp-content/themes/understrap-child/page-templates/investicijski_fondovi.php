@@ -45,7 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="nav-investicijski" role="tabpanel" aria-labelledby="nav-investicijski-tab">
 						<!-- TABLE -->
-						<table class="table table-responsive w-100 d-block d-md-table">
+						<table class="table table-responsive table-striped w-100 d-block d-md-table">
 							
 							<thead>
 								<tr>
@@ -153,7 +153,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						</table>
 						<!-- DRUGI TABLE -->
-						<table class="table table-responsive w-100 d-block d-md-table">
+						<table class="table table-responsive table-striped w-100 d-block d-md-table">
 							
 							<thead>
 								

@@ -421,11 +421,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 						
 						
-						<div>
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a>
-							<h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="row">
+							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
+							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
 							 
-							 <p><?php the_category(); ?></p>
+							
 						</div>
 						
 						
@@ -439,13 +440,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 			</div>
 			<div class="col-md-4" id="pojam_dana">
+				
+				
 				<h2 class="bg-secondary trake">POJAM DANA</h2>
-				<div class="pojam_dana">
-					<h2 class="color-secondary pojam_naslov">Inicijalna javna ponuda (IPO)</h2>
-					<p>Inicijalna javna ponuda (eng. initial public offering – IPO) jest prva javna ponuda običnih dionica nekog privatnog ili držanog poduzeća. Često se skraćeno označava kao IPO. Inicijalnom javnom ponudom privatno ili držano poduzeće izlazi u javnost.</p>
-					
-					<button type="button" class="btn btn-primary text-uppercase">Pogledaj sve</button>
+				
+
+		<?php
+
+          $ourCurrentPage = get_query_var('paged');
+
+          $aboutPosts = new WP_Query(array(
+            'posts_per_page'	=> 1,
+			'post_type'			=> 'pojam-dana',
+			'order' => 'ASC',
+            'paged' => $ourCurrentPage
+          ));
+
+	          if ($aboutPosts->have_posts()) :
+	            while ($aboutPosts->have_posts()) :
+	              $aboutPosts->the_post();
+	              ?> 
+
+	              <div class="pojam_dana">
+					<h2 class="color-secondary pojam_naslov"><?php the_title(); ?></h2>
+					<?php the_content(); ?> 
+					<button type="button" class="btn btn-primary text-uppercase"><a class="text-white" href="<?php bloginfo( 'url' ); ?>/pojam-dana">Pogledaj sve</a></button>
 				</div>
+	              <?php
+	            endwhile;
+
+	            /* echo paginate_links(array(
+	              'total' => $aboutPosts->max_num_pages
+	            ));*/
+
+	          endif;
+
+	        ?>
+						
+		
+			
 			</div>
 		</div>
 		<!-- ****************************
@@ -461,10 +494,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<img class="card-img-top" src="wp-content/uploads/2018/03/pbz-nekretnine.png" alt="Card image cap">
 							<div class="card-body">
 								<ul>
-									<li>Profil</li>
-									<li>Fondovi</li>
-									<li>Novosti</li>
-									<li>Kontakt</li>
+									<li><i class="fa fa-home" aria-hidden="true"></i> <span>Profil</span> </li>
+									<li><i class="fa fa-info" aria-hidden="true"></i> <span>Fondovi</span></li>
+									<li><i class="fa fa-rss" aria-hidden="true"></i> <span>Novosti</span></li>
+									<li><i class="fa fa-envelope" aria-hidden="true"></i> <span>Kontakt</span></li>
 									
 								</ul>
 							</div>

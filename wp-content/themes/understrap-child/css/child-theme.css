@@ -9501,6 +9501,9 @@ div#wrapper-navbar {
 li.active {
   font-weight: bold; }
 
+.table {
+  margin-bottom: 0; }
+
 .table th, .table td, .table tr, .table tbody + tbody {
   border: 0; }
 
@@ -9515,6 +9518,13 @@ li.active {
 
 #recent-posts-3 {
   padding: 0; }
+
+.saznaj_vise td {
+  padding: 0;
+  text-align: left; }
+
+.saznaj_vise td.slikica {
+  width: 20%; }
 
 /*#vijesti_sidebar h2:first-child{
     margin-bottom: 0;
@@ -9592,6 +9602,7 @@ li.active {
     position: absolute;
     bottom: 0;
     padding: 2em;
+    width: 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
     background: -moz-linear-gradient(top, transparent 0%, transparent 1%, rgba(0, 0, 0, 0.65) 100%);
     /* FF3.6-15 */
@@ -9658,20 +9669,18 @@ li.active {
 #pocetna_investicijski td {
   text-align: center; }
 
-#pocetna_investicijski tbody th {
-  font-weight: normal; }
-
-#pocetna_investicijski tbody tr:nth-child(2) {
-  background: #ECEDED; }
-
-#pocetna_investicijski tbody .dobitni {
-  color: #41A62A; }
-
-#pocetna_investicijski tbody .gubitni {
-  color: #BE0A26; }
-
-#pocetna_investicijski tbody .fa {
-  font-size: 1.2em; }
+#pocetna_investicijski tbody {
+  /*tr:nth-child(2){
+            background: $siva_pojam;
+        }*/ }
+  #pocetna_investicijski tbody th {
+    font-weight: normal; }
+  #pocetna_investicijski tbody .dobitni {
+    color: #41A62A; }
+  #pocetna_investicijski tbody .gubitni {
+    color: #BE0A26; }
+  #pocetna_investicijski tbody .fa {
+    font-size: 1.2em; }
 
 #pocetna_investicijski .nav-tabs .nav-link {
   text-transform: uppercase;
@@ -9756,6 +9765,10 @@ li.active {
 .widget {
   padding: 1em 0; }
 
+/*********** HOME_CARUSEL_DRUŠTVA *******/
+.multiple-items .card-body ul {
+  list-style-type: none; }
+
 /*********** EDUKACIJA_DIONICE *******/
 .table_dionice:nth-child(1) {
   background: #ECEDED; }
@@ -9776,6 +9789,9 @@ div#wrapper-footer {
   color: white; }
 
 /*********** SLICK *******/
+.slick-slide .post-categories {
+  list-style-type: none; }
+
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }

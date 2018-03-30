@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$query = new WP_Query($args);
 					while($query->have_posts()) : $query->the_post();
 					?>
-					<p><?php the_post_thumbnail('category-thumb'); ?></p>
+					<p><?php the_post_thumbnail(); ?></p>
 					
 					<div class="podnozje_naslova">
 						<div class="row">
@@ -68,7 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						?>
 						<div id="vijesti_4posta" class="col-md-6">
-							<?php the_post_thumbnail('category-thumb'); ?>	
+							<?php the_post_thumbnail(); ?>	
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						
 						</div>

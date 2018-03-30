@@ -20,28 +20,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				<div class="jedan">
-					<?php
-					
-					$posts = get_posts(array(
-						'posts_per_page'	=> -1,
-						'post_type'			=> 'drustva',
-						'order' => 'ASC'
-										
 
-					
-					));
-					if( $posts ): ?>
-					
+
+					<?php
+
+          $ourCurrentPage = get_query_var('paged');
+
+          $aboutPosts = new WP_Query(array(
+            'posts_per_page'	=> 2,
+			'post_type'			=> 'drustva',
+			'order' => 'ASC',
+            'paged' => $ourCurrentPage
+          ));
+
+	          if ($aboutPosts->have_posts()) :
+	            while ($aboutPosts->have_posts()) :
+	              $aboutPosts->the_post();
+	              ?> 
 					<table class="table table-striped">
-						
-						<?php foreach( $posts as $post ):
-							
-							setup_postdata( $post );
-							
-						?>
-						
-					
-						<tbody id="drustva_tablica">
+	              		<tbody id="drustva_tablica">
 							<tr>
 							<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 							<td> <?php 
@@ -56,27 +53,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 																
 							</tr>
 							<tr>
-							<td><?php the_content(); ?></td>
+							<td><?php the_content(); ?>
+								
+								
+							</td>
 							
 							
 							</tr>
 						
 							</tbody>
-						
-						
-						<?php endforeach; ?>
-						
-					</table>
-					
-					<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
-				</div>
+						</table>		
+	              <?php
+	            endwhile;
+
+	             echo paginate_links(array(
+	              'total' => $aboutPosts->max_num_pages
+	            ));
+
+	          endif;
+
+	        ?>
+
+
+
+		</div>
 		
 
 
-			
 				
-			</div>
+	</div>
 
 			
 		<!-- VIJESTI_SIDEBAR -->
