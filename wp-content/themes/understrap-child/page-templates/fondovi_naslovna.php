@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="podnozje_naslova">
 						<div class="row">
 							<div class="col-md-9">
-								<h2><a class="text-white" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
 							<div class="col-md-3">
 								<h4 class="kategorija"><?php the_category(); ?></h4>
@@ -50,14 +50,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 			</div>
 			<div class="col-md-4">
-				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
+				<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
 				<div class="jedan">
 					<?php
 							//argumenti
 							$args = array(
 								'post_type' => 'post',
 								'posts_per_page' => 1,
-																			'cat' => 10
+																			'cat' => 11
 							);
 							//novi query
 							$query = new WP_Query($args);
@@ -68,10 +68,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="podnozje_naslova">
 						<div class="row">
 							<div class="col-md-9">
-								<h2><a class="text-white" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
 							<div class="col-md-3">
-								<h4 class="kategorija"><?php the_category(); ?><i class="fa fa-square kvadrat_kategorije" aria-hidden="true"></i></h4>
+								<h4 class="kategorija"><?php the_category(); ?></h4>
 							</div>
 						</div>
 						
@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							$args = array(
 								'post_type' => 'post',
 								'posts_per_page' => 1,
-																			'cat' => 9
+																			'cat' => 12
 							);
 							//novi query
 							$query = new WP_Query($args);
@@ -98,7 +98,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="podnozje_naslova">
 						<div class="row">
 							<div class="col-md-9">
-								<h2><a class="text-white" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
 							<div class="col-md-3">
 								<h4 class="kategorija"><?php the_category(); ?></h4>
@@ -402,8 +402,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">VIJESTI</h2>
 				Ovdje ide carusel-vijesti
+				<!-- ************** -->
+				<a href="#">U Fokusu</a>
+				<a href="#">Hrvatska</a>
+				<a href="#">Regija</a>
 				
-				<div class="jedan">
+				<div class="jedan ufokusu">
 					<?php
 					$posts = get_posts(array(
 						'posts_per_page'	=> 6,
@@ -437,7 +441,76 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 				</div>
-				
+				<!-- ************** -->
+				<div class="jedan hrvatska">
+					<?php
+					$posts = get_posts(array(
+						'posts_per_page'	=> 6,
+										'post_type'			=> 'post',
+					'cat' => 9
+					));
+					if( $posts ): ?>
+					
+					<div class="single-item">
+						
+						<?php foreach( $posts as $post ):
+							
+							setup_postdata( $post );
+							
+						?>
+						
+						
+						<div class="row">
+							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
+							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
+							 
+							
+						</div>
+						
+						
+						<?php endforeach; ?>
+						
+					</div>
+					
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				</div>
+				<!-- ************** -->
+				<div class="jedan regija">
+					<?php
+					$posts = get_posts(array(
+						'posts_per_page'	=> 6,
+										'post_type'			=> 'post',
+					'cat' => 11
+					));
+					if( $posts ): ?>
+					
+					<div class="single-item">
+						
+						<?php foreach( $posts as $post ):
+							
+							setup_postdata( $post );
+							
+						?>
+						
+						
+						<div class="row">
+							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
+							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
+							 
+							
+						</div>
+						
+						
+						<?php endforeach; ?>
+						
+					</div>
+					
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				</div>
 			</div>
 			<div class="col-md-4" id="pojam_dana">
 				

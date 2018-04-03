@@ -16,7 +16,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			EDUKACJIA__1. DIONICE
 		*******************************-->
 		
-		<div class="row" id="vijesti_sidebar">
+		<div
+		 class="row" id="vijesti_sidebar">
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				<div class="jedan">
@@ -53,7 +54,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 																
 							</tr>
 							<tr>
-							<td><?php the_content(); ?>
+							<td>
+								<h2>Ovdje idu fondovi</h2>
+								<!-- <?php the_content(); ?> -->
 								
 								
 							</td>
@@ -88,7 +91,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 			<div class="col-md-4">
-				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
+				<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
 				
 				<?php  dynamic_sidebar('vijesti-sidebar')  ?>
 			</div>

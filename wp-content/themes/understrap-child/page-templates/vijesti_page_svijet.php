@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="podnozje_naslova">
 						<div class="row">
 							<div class="col-md-9">
-								<h2><a class="text-white" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
 							<div class="col-md-3">
 								<h4 class="kategorija"><?php the_category(); ?></h4>
@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endif; ?>
 
-					<h2 class="bg-primary trake mt-3 mb-0">SAZNAJTE VIŠE</h2>
+					<h2 class="bg-primary trake mt-3">SAZNAJTE VIŠE</h2>
 
 					<?php
 
@@ -132,7 +132,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 			<div class="col-md-4">
-				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
+				<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
 				
 				<?php  dynamic_sidebar('vijesti-sidebar')  ?>
 			</div>

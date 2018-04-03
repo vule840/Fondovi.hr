@@ -2,58 +2,200 @@ body {
     font-family: $font;
 }
 
-
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+h2{
+    margin-bottom: 1em;
+}
 /*********** HOME_HEADER_NAV *******/
 div#wrapper-navbar {
     background: $primary;
 }
-.navbar-dark .navbar-nav .nav-link{
+.navbar {
+    padding: 0.5rem 0rem;
+}
+.navbar-dark .navbar-nav .nav-link {
     color: white;
     text-transform: uppercase;
-   
-    &:hover{
+
+    &:hover {
         font-weight: bold;
-         color: white;
-       
+        color: white;
     }
- 
 }
-li.active{
+li.active {
     font-weight: bold;
 }
 
+//KATEGORIJE BOJE SVIJET,REGIJA,HRVATSKA
+
+//Hrvatska
+.page-template-vijesti_page_hrvatska {
+    .podnozje_naslova {
+        a:hover {
+            color: $hrvatska;
+        }
+        h2 {
+            a {
+                color: white;
+                &:hover {
+                    color: $hrvatska;
+                }
+            }
+        }
+    }
+    #vijesti_4posta {
+        a:hover {
+            color: $hrvatska;
+        }
+    }
+}
+//Regija
+.page-template-vijesti_page_regija {
+    .podnozje_naslova {
+        ul.post-categories {
+            li {
+                a:hover {
+                    color: $regija !important;
+                }
+                &:after {
+                    content: "\f0c8";
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    font-style: normal;
+                    margin: 0px 0px 0px 8px;
+                    text-decoration: none;
+                    color: $regija !important;
+                }
+            }
+        }
+
+        h2 {
+            a {
+                color: white;
+                &:hover {
+                    color: $regija !important;
+                }
+            }
+        }
+    }
+    #vijesti_4posta {
+        a:hover {
+            color: $regija;
+        }
+    }
+}
+//Svijet
+.page-template-vijesti_page_svijet {
+    .podnozje_naslova {
+        ul.post-categories {
+            li {
+                a:hover {
+                    color: $svijet !important;
+                }
+                &:after {
+                    content: "\f0c8";
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    font-style: normal;
+                    margin: 0px 0px 0px 8px;
+                    text-decoration: none;
+                    color: $svijet !important;
+                }
+            }
+        }
+
+        h2 {
+            a {
+                color: white;
+                &:hover {
+                    color: $svijet !important;
+                }
+            }
+        }
+    }
+    #vijesti_4posta {
+        a:hover {
+            color: $svijet;
+        }
+    }
+}
+
 //NASLOVI_TRAKE_H2
-.table{
+.table {
     margin-bottom: 0;
 }
-.table th, .table td, .table tr, .table tbody + tbody{
-    border:0;
+.table th,
+.table td,
+.table tr,
+.table tbody + tbody {
+    border: 0;
 }
-.table th, .table td{
+.table th,
+.table td {
     vertical-align: middle;
 }
-.tablica_sivo{
-    background:  #ECEDED;
+.tablica_sivo {
+    background: #eceded;
 }
-.tablica_objave td{
+.tablica_objave td {
     padding: 0em 0.75em 0em 0em;
 }
-#recent-posts-3{
-    padding:0;
+#recent-posts-3 {
+    padding: 0;
 }
 
 .saznaj_vise {
-    td{
-       padding: 0;
-    text-align: left; 
+    td {
+        padding: 0;
+        text-align: left;
+        &:hover{
+            background: $primary;
+            color:white;
+            a{
+                color:white;
+            }
+        }
+        a{
+            padding-left: 1em;
+            display: inline-block;
+            &:hover{
+                color: white;
+            }
+        }
     }
-    td.slikica{
-        width: 20%;
+    td.slikica {
+        width: 14%;
     }
-    
-
 }
 
+[type="search"] {
+    outline-offset: 0px;
+    -webkit-appearance: none;
+    border: 0;
+    background: #6c191b;
+    padding: 0.4em;
+    color: white;
+}
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: white;
+}
 /*#vijesti_sidebar h2:first-child{
     margin-bottom: 0;
 }*/
@@ -66,48 +208,43 @@ li.active{
     font-weight: bold;
 }
 
-
-.kvadrat_kategorije{
+.kvadrat_kategorije {
     color: $primary;
 }
 //H2 SINGLE KATEGORIJA
-.single{
-    #single_post_naslov{
+.single {
+    #single_post_naslov {
         padding: 1em 0;
-        h2{
-             font-size: 1.5em;
-               
+        h2 {
+            font-size: 1.5em;
         }
-        .kategorija{
+        .kategorija {
             font-size: 1.2em;
-            a{
-                
+            a {
                 text-transform: uppercase;
-                color:$primary;
-          }
+                color: $primary;
+            }
         }
-          
-    } 
-    
-   ul.post-categories{
-             padding-right: 0.5em;
-            padding:0;
-            list-style: none;
-            margin-bottom: 0;
-            margin-left: 0;
-            float: left;
+    }
 
-            a{
-                
-                text-transform: uppercase;
-                color:white;
-          }
+    ul.post-categories {
+        padding-right: 0.5em;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+        margin-left: 0;
+        float: left;
+
+        a {
+            text-transform: uppercase;
+            color: white;
         }
-      
-    .post{
-        .trake{
-        padding-bottom: 1.5rem;
-     }
+    }
+
+    .post {
+        .trake {
+            padding-bottom: 1.5rem;
+        }
     }
 }
 
@@ -148,7 +285,7 @@ li.active{
         color: white;
         text-transform: uppercase;
         .post-categories {
-            list-style-type: square;
+            list-style-type: none;
             margin-bottom: 0.5em;
             position: absolute;
             bottom: 0;
@@ -195,10 +332,34 @@ li.active{
                 endColorstr="#a6000000",
                 GradientType=0
             ); /* IE6-9 */
-
+        h2 {
+            //font-size: 1.2em;
+            a {
+                color: white;
+                &:hover {
+                    color: $hrvatska;
+                }
+            }
+        }
         h4.kategorija {
             ul {
+                padding-left: 0;
+                a {
+                    color: white;
+                    &:hover {
+                        color: $hrvatska;
+                    }
+                }
             }
+        }
+        ul.post-categories li:after {
+            content: "\f0c8";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            margin: 0px 0px 0px 8px;
+            text-decoration: none;
+            color: $primary;
         }
     }
 }
@@ -209,6 +370,7 @@ li.active{
         position: absolute;
         bottom: 0;
         padding: 1em;
+        width: 100%;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
         background: -moz-linear-gradient(
             top,
@@ -235,12 +397,33 @@ li.active{
             ); /* IE6-9 */
         h2 {
             font-size: 1.2em;
+            a {
+                color: white;
+                &:hover {
+                    color: $regija;
+                }
+            }
         }
         h4.kategorija {
             font-size: 0.8em;
             ul {
                 padding-left: 0;
+                a {
+                    color: white;
+                    &:hover {
+                        color: $regija;
+                    }
+                }
             }
+        }
+        ul.post-categories li:after {
+            content: "\f0c8";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            margin: 0px 0px 0px 8px;
+            text-decoration: none;
+            color: $regija;
         }
     }
 }
@@ -251,6 +434,7 @@ li.active{
         position: absolute;
         bottom: 0;
         padding: 1em;
+        width: 100%;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
         background: -moz-linear-gradient(
             top,
@@ -277,127 +461,144 @@ li.active{
             ); /* IE6-9 */
         h2 {
             font-size: 1.2em;
-        }
-        h4.kategorija {
-            font-size: 0.8em;
-            ul {
-                padding-left: 0;
+            a {
+                color: white;
+                &:hover {
+                    color: $svijet;
+                }
             }
         }
+    }
+    h4.kategorija {
+        font-size: 0.8em;
+        ul {
+            padding-left: 0;
+            a {
+                color: white;
+                &:hover {
+                    color: $svijet;
+                }
+            }
+        }
+    }
+    ul.post-categories li:after {
+        content: "\f0c8";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        margin: 0px 0px 0px 8px;
+        text-decoration: none;
+        color: $svijet;
     }
 }
 
 /*********** HOME_INVESTICIJSKI-FONDOVI *******/
-#pocetna_investicijski{
-    thead{
+#pocetna_investicijski {
+    thead {
         background: $siva_pojam;
         padding: 1em;
-        th{
+        th {
             padding: 1.7rem;
             text-transform: uppercase;
             text-align: center;
         }
-
     }
-     td{
-            text-align: center;
-        }
-    tbody{
-        th{
+    td {
+        text-align: center;
+    }
+    tbody {
+        th {
             font-weight: normal;
         }
         /*tr:nth-child(2){
             background: $siva_pojam;
         }*/
-        .dobitni{
-            color: #41A62A;
+        .dobitni {
+            color: #41a62a;
         }
-        .gubitni{
-            color: #BE0A26;
+        .gubitni {
+            color: #be0a26;
         }
-        .fa{
-                font-size: 1.2em;
+        .fa {
+            font-size: 1.2em;
         }
-    } 
-    .nav-tabs .nav-link{
+    }
+    .nav-tabs .nav-link {
         text-transform: uppercase;
         color: white;
         font-weight: bold;
         background: $sivija_tablica;
         //padding: 0.5em 1.85em;
         margin-right: 0.3em;
-        &:last-child{
+        &:last-child {
             margin-right: 0;
         }
     }
-    .nav-tabs .nav-link.active{
-        background: #697A7B;
-    }   
-
+    .nav-tabs .nav-link.active {
+        background: #697a7b;
+    }
 }
-.investicijski_pocetni{
-    th{
+.investicijski_pocetni {
+    th {
         background: white;
     }
-    th:first-child{
+    th:first-child {
         text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    background: #293D40;
-    margin-right: 0.3em;
-    padding: 1em !important;
+        color: white;
+        font-weight: bold;
+        background: #293d40;
+        margin-right: 0.3em;
+        padding: 1em !important;
     }
 }
 //widgeti_fondovi
 .widget #pocetna_investicijski {
-    .nav-tabs .nav-link{
+    .nav-tabs .nav-link {
         margin-right: 0;
-         color:#3E3D40;
-        background: #EBECEC;
+        color: #3e3d40;
+        background: #ebecec;
         font-size: 0.7em;
-        border:none;
-        border-top-left-radius:0;
-        border-top-right-radius:0;
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
-    h2{
+    h2 {
         margin-bottom: 0;
     }
-    tbody{
-        th{
-                padding-left: 3em;
+    tbody {
+        th {
+            padding-left: 3em;
             font-style: 0.8em;
         }
-        td{
+        td {
             font-style: 0.8em;
         }
     }
 }
 
-
 /*********** HOME_VIJESTI *******/
-#pocetna_vijesti{
-
-    .naslov{
+#pocetna_vijesti {
+    .naslov {
         font-size: 1.2em;
         padding-top: 1em;
     }
 }
-  #pojam_dana{
-    h2{
+#pojam_dana {
+    h2 {
         margin-bottom: 0;
-        
+
         font-weight: bold;
         text-transform: uppercase;
     }
-    .pojam_naslov{
+    .pojam_naslov {
         font-size: 1.2em;
     }
-    p{
+    p {
         padding-top: 1em;
     }
-    
+}
 
-  }
+//Kvadarti na slicku
 
 //padding na slicku
 .single-item.slick-initialized.slick-slider.slick-dotted {
@@ -415,49 +616,44 @@ li.active{
     }
 }
 
-
 /*********** VIJESTI_4POSTA *******/
 
-
-#vijesti_4posta{
-    img{
-        padding-bottom: 1em;
-            padding-top: 1em;
-    }
-    a{
+#vijesti_4posta {
+    padding-bottom: 1em;
+   
+    a {
         font-size: 1.2em;
         color: $secondary;
-        &:hover{
+        &:hover {
             color: $primary;
         }
     }
 }
 
-    .widget{
-        padding: 1em 0;
-    }
-
+.widget {
+    padding: 1em 0;
+}
 
 /*********** HOME_CARUSEL_DRUŠTVA *******/
 
-.multiple-items .card-body{
-    
-    ul{
+.multiple-items .card-body {
+    ul {
         list-style-type: none;
     }
 }
 
 /*********** EDUKACIJA_DIONICE *******/
 
-.table_dionice:nth-child(1){
-background: #ECEDED;
+.table_dionice:nth-child(1) {
+    background: #eceded;
 }
 
 /*********** DRUŠTVA ZA UPRAVLJANJE *******/
 
 tbody#drustva_tablica {
     border: none;
-    td,th{
+    td,
+    th {
         border: none;
         vertical-align: middle;
     }
@@ -466,7 +662,7 @@ tbody#drustva_tablica {
 /*********** FOOTER *******/
 
 div#wrapper-footer {
-    background: #5D5D5D;
+    background: #5d5d5d;
 }
 
 #wrapper-footer-full {
@@ -474,19 +670,76 @@ div#wrapper-footer {
     color: white;
 }
 
-
-
-
 /*********** SLICK *******/
 
-.slick-prev, .slick-next{
+.slick-prev,
+.slick-next {
     z-index: 10;
 }
 
-.slick-slide .post-categories{
+.ufokusu {
+    .slick-slide .post-categories {
+        li {
+            &:after {
+                content: "\f0c8";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                margin: 0px 0px 0px 8px;
+                text-decoration: none;
+                color: $ufokusu;
+            }
+        }
+    }
+}
+.svijet {
+    .slick-slide .post-categories {
+        li {
+            &:after {
+                content: "\f0c8";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                margin: 0px 0px 0px 8px;
+                text-decoration: none;
+                color: $svijet;
+            }
+        }
+    }
+}
+.regija {
+    .slick-slide .post-categories {
+        li {
+            &:after {
+                content: "\f0c8";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                margin: 0px 0px 0px 8px;
+                text-decoration: none;
+                color: $regija;
+            }
+        }
+    }
+}
+.hrvatska {
+    .slick-slide .post-categories {
+        li {
+            &:after {
+                content: "\f0c8";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                margin: 0px 0px 0px 8px;
+                text-decoration: none;
+                color: $hrvatska;
+            }
+        }
+    }
+}
+.slick-slide .post-categories {
     list-style-type: none;
 }
-
 
 @charset 'UTF-8';
 /* Slider */
