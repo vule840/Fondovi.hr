@@ -25,6 +25,35 @@
 								</div>
 			<div class="col-6"><?php the_field('drustva_tx') ?></div>
 		</div>
+
+		<!-- OVDJE JE PETLJA ZA FONDOVE SELECT -->
+
+		 <div class="form-group">
+		 	<h2>FONDOVI POD UPRAVLJANJEM</h2>
+		    
+		    <select class="form-control" id="exampleSelect1">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>	
+
+
+		<?php
+			$post_objects = get_field('post_object');
+
+			if( $post_objects ): ?>
+			    <select class="form-control" id="exampleSelect1">
+			    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+			        <?php setup_postdata($post); ?>
+			        <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
+			        
+			    <?php endforeach; ?>
+			    </select>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 	<?php else: ?>
 		<h2 class="bg-primary trake"><?php the_category() ?></h2>
 
@@ -61,6 +90,34 @@
 		?>
 
 	</div><!-- .entry-content -->
+
+		gjhjhgjg
+
+<?php if (is_singular('drustva')): ?>
+
+		<?php
+
+
+$post_objects = get_field('post_object');
+
+if( $post_objects ): ?>
+    <ul>
+    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+        <?php setup_postdata($post); ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+           
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
+		
+	<h2 class="bg-primary trake">Mapa</h2>
+	<?php the_field('mapa2') ?>
+		
+		
+	<?php endif ?>
 
 	 <!--<footer class="entry-footer">
 

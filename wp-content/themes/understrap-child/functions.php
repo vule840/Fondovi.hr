@@ -679,8 +679,10 @@ add_action('widgets_init', 'my_recent_widget_registration');
 
 
  
-  
-    
+function my_acf_init() {
+  acf_update_setting('google_api_key', 'AIzaSyDxSSFvDIr5NGKiDtEIF7u0fCVpbDcOOeY');
+}
+add_action('acf/init', 'my_acf_init');    
      
     
   

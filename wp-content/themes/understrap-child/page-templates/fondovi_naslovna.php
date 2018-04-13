@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 			</div>
 			<div class="col-md-4">
-				<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
+				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
 				<div class="jedan">
 					<?php
 							//argumenti
@@ -561,6 +561,61 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-8">
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				Ovdje ide carusel-logići
+
+				<?php
+					$posts = get_posts(array(
+						'posts_per_page'	=> 6,
+						'post_type'			=> 'drustva'
+					));
+					if( $posts ): ?>
+					
+					<div class="single-item">
+						
+						<?php foreach( $posts as $post ):
+							
+							setup_postdata( $post );
+							
+						?>
+						
+						<div>
+
+						<a href="<?php the_permalink( ); ?>">Profil</a>
+						<?php 
+						$image = get_field('logo');
+
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>	
+
+
+						</div>
+						<?php endforeach; ?>
+
+						
+					</div>
+					
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+
+						<?php
+
+
+$post_objects = get_field('post_object');
+
+if( $post_objects ): ?>
+    <ul>
+    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+        <?php setup_postdata($post); ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+           
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
+
+
 				<div class="multiple-items">
 					<div>
 						<div class="card" >
