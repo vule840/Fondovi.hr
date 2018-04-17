@@ -10219,3 +10219,48 @@ div#wrapper-footer {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.form-control option, .wpcf7 input[type=text] option,
+.wpcf7 input[type=search] option,
+.wpcf7 input[type=url] option,
+.wpcf7 input[type=tel] option,
+.wpcf7 input[type=number] option,
+.wpcf7 input[type=range] option,
+.wpcf7 input[type=date] option,
+.wpcf7 input[type=month] option,
+.wpcf7 input[type=week] option,
+.wpcf7 input[type=time] option,
+.wpcf7 input[type=datetime] option,
+.wpcf7 input[type=datetime-local] option,
+.wpcf7 input[type=color] option,
+.wpcf7 input[type=email] option,
+.wpcf7 input[type=file] option,
+.wpcf7 input[type=submit] option,
+.wpcf7 select option,
+.wpcf7 textarea option, .wpcf7 .wpcf7-validation-errors option {
+  padding: 1rem;
+  font-weight: bold; }
+
+.form-control option:nth-of-type(odd), .wpcf7 input[type=text] option:nth-of-type(odd),
+.wpcf7 input[type=search] option:nth-of-type(odd),
+.wpcf7 input[type=url] option:nth-of-type(odd),
+.wpcf7 input[type=tel] option:nth-of-type(odd),
+.wpcf7 input[type=number] option:nth-of-type(odd),
+.wpcf7 input[type=range] option:nth-of-type(odd),
+.wpcf7 input[type=date] option:nth-of-type(odd),
+.wpcf7 input[type=month] option:nth-of-type(odd),
+.wpcf7 input[type=week] option:nth-of-type(odd),
+.wpcf7 input[type=time] option:nth-of-type(odd),
+.wpcf7 input[type=datetime] option:nth-of-type(odd),
+.wpcf7 input[type=datetime-local] option:nth-of-type(odd),
+.wpcf7 input[type=color] option:nth-of-type(odd),
+.wpcf7 input[type=email] option:nth-of-type(odd),
+.wpcf7 input[type=file] option:nth-of-type(odd),
+.wpcf7 input[type=submit] option:nth-of-type(odd),
+.wpcf7 select option:nth-of-type(odd),
+.wpcf7 textarea option:nth-of-type(odd), .wpcf7 .wpcf7-validation-errors option:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: bold; }
+
+#drustva_fondovi option {
+  padding: 2rem; }

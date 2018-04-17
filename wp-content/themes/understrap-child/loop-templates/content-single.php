@@ -28,27 +28,18 @@
 
 		<!-- OVDJE JE PETLJA ZA FONDOVE SELECT -->
 
-		 <div class="form-group">
+		
 		 	<h2>FONDOVI POD UPRAVLJANJEM</h2>
-		    
-		    <select class="form-control" id="exampleSelect1">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		  </div>	
-
-
+		   
+		 
 		<?php
 			$post_objects = get_field('post_object');
 
 			if( $post_objects ): ?>
-			    <select class="form-control" id="exampleSelect1">
+			    <select class="form-control" id="drustva_fondovi">
 			    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
 			        <?php setup_postdata($post); ?>
-			        <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
+			        <option class="p-3 m-3" value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
 			        
 			    <?php endforeach; ?>
 			    </select>
@@ -77,7 +68,7 @@
 
 	
 
-	<div class="entry-content">
+	<div class="entry-content pt-3">
 
 		<?php the_content(); ?>
 	
@@ -91,34 +82,13 @@
 
 	</div><!-- .entry-content -->
 
-		gjhjhgjg
 
-<?php if (is_singular('drustva')): ?>
-
-		<?php
-
-
-$post_objects = get_field('post_object');
-
-if( $post_objects ): ?>
-    <ul>
-    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-           
-        </li>
-    <?php endforeach; ?>
-    </ul>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
-		
-	<h2 class="bg-primary trake">Mapa</h2>
-	<?php the_field('mapa2') ?>
-		
-		
-	<?php endif ?>
-
+	<?php if (is_singular('drustva')): ?>
+		<h2 class="bg-primary trake"><?php the_title() ?></h2>
+		<?php the_field('mapa'); ?>
+		<div id="map_canvas" style="height: 350px;width: 1200px; margin: 0.6em;"></div>
+			
+	<?php endif ?>	
 	 <!--<footer class="entry-footer">
 
 		<?php understrap_entry_footer(); ?>
@@ -126,3 +96,26 @@ if( $post_objects ): ?>
 	</footer> .entry-footer -->
 
 </article><!-- #post-## -->
+<?php $map = get_field('map', get_the_ID()); ?>
+
+<script type="text/javascript"> 
+
+  function initialize() {
+        var myLatlng = new google.maps.LatLng(<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>);
+        var myOptions = {
+          zoom: 11,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+      }
+
+      function loadScript() {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+        document.body.appendChild(script);
+      }
+
+      window.onload = loadScript;
+    </script>

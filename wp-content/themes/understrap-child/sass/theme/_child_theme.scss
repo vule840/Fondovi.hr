@@ -1029,3 +1029,15 @@ div#wrapper-footer {
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.form-control option{
+        padding: 1rem;
+        font-weight: bold;
+}
+.form-control option:nth-of-type(odd){
+        background-color: rgba(0, 0, 0, 0.05);
+        font-weight: bold;
+}
+#drustva_fondovi option{
+    padding:2rem;
+}
