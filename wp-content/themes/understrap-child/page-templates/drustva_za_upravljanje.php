@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</tr>
 							<tr>
 							<td>
-								<h2>Ovdje idu fondovi</h2>
+								<!-- <h2>Ovdje idu fondovi</h2> -->
 								<!-- <?php the_content(); ?> -->
 								<?php
 

@@ -89,6 +89,12 @@
 		<div id="map_canvas" style="height: 350px;width: 1200px; margin: 0.6em;"></div>
 			
 	<?php endif ?>	
+
+
+	
+	
+
+
 	 <!--<footer class="entry-footer">
 
 		<?php understrap_entry_footer(); ?>

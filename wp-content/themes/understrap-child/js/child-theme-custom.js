@@ -17,6 +17,9 @@ jQuery(document).ready(function($) {
 	$(".single-drustva article h2").each(function(index) {
 		$(this).addClass("bg-primary trake text-uppercase");
 	});
+	$(".single-fondovi article h2").each(function(index) {
+		$(this).addClass("bg-primary trake text-uppercase");
+	});
 
 	//$(".post-categories li a").insertAfter(".kvadrat_kategorije");
 

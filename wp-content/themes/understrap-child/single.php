@@ -21,8 +21,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if (is_singular( 'fondovi' )): ?>
+						<?php get_template_part( 'loop-templates/content', 'fondovi' ); ?>
+					<?php else: ?>
+						<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php endif ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					
 
 						<?php understrap_post_nav(); ?>
 

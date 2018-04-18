@@ -442,7 +442,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endif; ?>
 				</div>
 				<!-- ************** -->
-				<div class="jedan hrvatska">
+				<!-- <div class="jedan hrvatska">
 					<?php
 					$posts = get_posts(array(
 						'posts_per_page'	=> 6,
@@ -475,9 +475,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
-				</div>
+				</div> -->
+				
 				<!-- ************** -->
-				<div class="jedan regija">
+				<!-- <div class="jedan regija">
 					<?php
 					$posts = get_posts(array(
 						'posts_per_page'	=> 6,
@@ -510,7 +511,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
-				</div>
+				</div> -->
+				
 			</div>
 			<div class="col-md-4" id="pojam_dana">
 				
@@ -562,7 +564,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				Ovdje ide carusel-logići
 
-				<?php
+			<!-- <?php
 					$posts = get_posts(array(
 						'posts_per_page'	=> 6,
 						'post_type'			=> 'drustva'
@@ -613,7 +615,9 @@ if( $post_objects ): ?>
     <?php endforeach; ?>
     </ul>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
+<?php endif; ?> -->
+
+				
 
 
 				<div class="multiple-items">
