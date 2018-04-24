@@ -36,8 +36,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="col-md-9">
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
-							<div class="col-md-3">
-								<h4 class="kategorija"><?php the_category(); ?></h4>
+							<div class="col-md-3 ">
+								<h4 class="kategorija text-right"><?php the_category(); ?></h4>
 							</div>
 						</div>
 						
@@ -133,7 +133,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 						<!-- TABLE -->
-						<table class="table table-responsive w-100 d-block d-md-table">
+						<table class="table table-responsive w-100 d-block d-md-table table-striped">
 							<!-- Dobitnici -->
 							<thead>
 								<tr>
@@ -564,7 +564,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				Ovdje ide carusel-logići
 
-			<!-- <?php
+			 <?php
 					$posts = get_posts(array(
 						'posts_per_page'	=> 6,
 						'post_type'			=> 'drustva'
@@ -580,42 +580,47 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 						
 						<div>
-
-						<a href="<?php the_permalink( ); ?>">Profil</a>
-						<?php 
-						$image = get_field('logo');
+							<?php 
+						$image = get_field('drustva_logo');
 
 						if( !empty($image) ): ?>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<?php endif; ?>	
+						<a href="<?php the_permalink( ); ?>">Profil</a><br>
+						<a href="<?php the_permalink( ); ?>">Kontakt</a>
+						
 
 
 						</div>
 						<?php endforeach; ?>
 
+					<!-- <?php 
+
+						$posts = get_field('povezane_vijesti_drustva');
+
+						if( $posts ): ?>
+						    <ul>
+						    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+						        <?php setup_postdata($post); ?>
+						        <li>
+						        	
+						            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						            
+						        </li>
+						    <?php endforeach; ?>
+						    </ul>
+						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+						<?php endif; ?> -->
+
+						
 						
 					</div>
 					
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
 
-						<?php
+						
 
-
-$post_objects = get_field('post_object');
-
-if( $post_objects ): ?>
-    <ul>
-    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-           
-        </li>
-    <?php endforeach; ?>
-    </ul>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?> -->
 
 				
 

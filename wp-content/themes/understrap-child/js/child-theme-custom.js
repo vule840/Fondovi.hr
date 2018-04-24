@@ -1,6 +1,7 @@
 console.log("dsfsdgjhghfsd");
 
 jQuery(document).ready(function($) {
+	/*
 	$("select").click(function() {
 		var open = $(this).data("isopen");
 		if (open) {
@@ -9,7 +10,7 @@ jQuery(document).ready(function($) {
 		//set isopen to opposite so next time when use clicked select box
 		//it wont trigger this event
 		$(this).data("isopen", !open);
-	});
+	});*/
 
 	$(".tablica_edu:nth-child(odd)").each(function(index) {
 		$(this).addClass("tablica_sivo");
@@ -19,6 +20,10 @@ jQuery(document).ready(function($) {
 	});
 	$(".single-fondovi article h2").each(function(index) {
 		$(this).addClass("bg-primary trake text-uppercase");
+	});
+
+	$("#drustva_fondovi tbody:nth-child(odd)").each(function(index) {
+		$(this).addClass("tablica_sivo");
 	});
 
 	//$(".post-categories li a").insertAfter(".kvadrat_kategorije");

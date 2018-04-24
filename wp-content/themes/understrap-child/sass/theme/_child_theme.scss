@@ -8,7 +8,7 @@ a {
     }
 }
 h2{
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 /*********** HOME_HEADER_NAV *******/
 div#wrapper-navbar {
@@ -17,7 +17,7 @@ div#wrapper-navbar {
 .navbar {
     padding: 0.5rem 0rem;
 }
-.navbar-dark .navbar-nav .nav-link {
+/*.navbar-dark .navbar-nav .nav-link {
     color: white;
     text-transform: uppercase;
 
@@ -25,9 +25,26 @@ div#wrapper-navbar {
         font-weight: bold;
         color: white;
     }
-}
+}*/
 li.active {
     font-weight: bold;
+}
+
+//www.sitepoint.com/quick-tip-fixing-font-weight-problem-hover-states/
+
+//Hover shadow
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    text-transform: uppercase;
+     letter-spacing: .01em;
+  transition: text-shadow .3s;
+    &:hover {
+        //text-shadow: 0 0 .65px #fff, 0 0 .65px #fff;
+         text-shadow: 0 0 .9px #fff, 0 0 .9px #fff, 0 0 .9px #fff; 
+        //font-weight: bold;
+       // margin:0 -3px;
+        color: white;
+    }
 }
 
 //KATEGORIJE BOJE SVIJET,REGIJA,HRVATSKA
@@ -210,6 +227,7 @@ li.active {
 
 .kvadrat_kategorije {
     color: $primary;
+        padding-left: 0.4rem;
 }
 //H2 SINGLE KATEGORIJA
 .single {
@@ -287,8 +305,8 @@ li.active {
         .post-categories {
             list-style-type: none;
             margin-bottom: 0.5em;
-            position: absolute;
-            bottom: 0;
+            /*position: absolute;
+            bottom: 0;*/
         }
         a {
             color: white;
@@ -306,7 +324,7 @@ li.active {
     .podnozje_naslova {
         position: absolute;
         bottom: 0;
-        padding: 2em;
+        padding: 1em;
         width: 100%;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
         background: -moz-linear-gradient(
@@ -358,6 +376,7 @@ li.active {
             font-weight: normal;
             font-style: normal;
             margin: 0px 0px 0px 8px;
+            font-size: 1.3rem;
             text-decoration: none;
             color: $primary;
         }
@@ -656,6 +675,31 @@ tbody#drustva_tablica {
     th {
         border: none;
         vertical-align: middle;
+        ul{
+            padding-left: 1rem;
+        }
+        li {
+            display: inline-block;
+            padding-right: 1rem;
+            list-style: none;
+            
+            height: 20px;
+            
+            a{
+                font-size: 0.8rem;
+                border-left: 2px solid $primary;
+                padding-left: 0.4rem;
+            }
+        }
+    }
+    .drustvo_upravljanje{
+        
+            font-weight: bold;
+            padding-left: 1rem;
+            color:$siva;
+            &:hover{
+                color: $primary;
+            }
     }
 }
 
@@ -1038,6 +1082,70 @@ div#wrapper-footer {
         background-color: rgba(0, 0, 0, 0.05);
         font-weight: bold;
 }
-#drustva_fondovi option{
+
+/****************** 
+        DRUŠTVA FONDOVI
+
+ *********************/
+
+
+#drustva_fondovi {
     padding:2rem;
+    tbody{
+        
+        td{
+            a{
+              color: $siva;
+              font-weight: bold;
+              padding-left: 1.2rem;
+
+            }
+        }
+        &:hover{
+                background: $siva;
+                color: #fff;
+                font-weight: bold;
+                a{
+                    color:#fff;
+                }
+              } 
+    }
+}
+
+.acf-map {
+    width: 100%;
+    height: 400px;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
+
+/****************** 
+        FOOTER LINKOVI
+
+ *********************/
+#wrapper-footer-full{
+    #nav_menu-2,#nav_menu-3{
+        border-left: 1px solid #fff;
+    }
+    
+        ul.menu{
+            padding-left: 0rem;
+            list-style-type: none;
+            
+            li{
+            a{
+                color: #fff;
+                &:hover{
+                    text-shadow: 0 0 0.9px #fff, 0 0 0.9px #fff, 0 0 0.9px #fff;
+                }
+            }
+        }
+        }
+        
+   
 }
