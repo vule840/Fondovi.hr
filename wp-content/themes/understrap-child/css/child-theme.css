@@ -9689,7 +9689,8 @@ li.active {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#a6000000", GradientType=0 );
   /* IE6-9 */ }
   .podnozje_naslova h2 {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-bottom: 0; }
   .podnozje_naslova .kategorija {
     font-size: 1.2em;
     color: white;
@@ -9726,12 +9727,14 @@ li.active {
       color: white; }
       .prvi .podnozje_naslova h2 a:hover {
         color: #B7151F; }
-    .prvi .podnozje_naslova h4.kategorija ul {
-      padding-left: 0; }
-      .prvi .podnozje_naslova h4.kategorija ul a {
-        color: white; }
-        .prvi .podnozje_naslova h4.kategorija ul a:hover {
-          color: #B7151F; }
+    .prvi .podnozje_naslova h4.kategorija {
+      margin-bottom: 0; }
+      .prvi .podnozje_naslova h4.kategorija ul {
+        padding-left: 0; }
+        .prvi .podnozje_naslova h4.kategorija ul a {
+          color: white; }
+          .prvi .podnozje_naslova h4.kategorija ul a:hover {
+            color: #B7151F; }
     .prvi .podnozje_naslova ul.post-categories li:after {
       content: "\f0c8";
       font-family: FontAwesome;
