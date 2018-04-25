@@ -17,6 +17,28 @@ div#wrapper-navbar {
 .navbar {
     padding: 0.5rem 0rem;
 }
+
+@media (min-width: 768px){
+    .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    background: transparent;
+    border: none;
+    }
+}
+
+.dropup, .dropdown {
+    /* position: relative; */
+
+}
+
+.dropdown-menu.show {
+    display: inline-flex;
+}
+
 /*.navbar-dark .navbar-nav .nav-link {
     color: white;
     text-transform: uppercase;
@@ -141,6 +163,25 @@ li.active {
     }
 }
 
+//TEČAJNA LISTA
+
+
+
+.tecajna_lista{
+    .valute{
+        th:first-child{
+            padding-left: 2.5em;
+        }
+    }
+    tr:first-child{
+        td, th{
+            font-size: 0.8rem;
+        }
+        
+    }
+}
+
+
 //NASLOVI_TRAKE_H2
 .table {
     margin-bottom: 0;
@@ -164,7 +205,12 @@ li.active {
 #recent-posts-3 {
     padding: 0;
 }
-
+#recent-posts-5{
+    padding-top: 0;
+}
+#execphp-4{
+    padding-top: 0;
+}
 .saznaj_vise {
     td {
         padding: 0;
@@ -189,6 +235,16 @@ li.active {
     }
 }
 
+#execphp-7{
+    .saznaj_vise td.slikica{
+        width:20%;
+    }
+}
+#execphp-8{
+    .saznaj_vise td.slikica{
+        width:20%;
+    }
+}
 [type="search"] {
     outline-offset: 0px;
     -webkit-appearance: none;
@@ -651,8 +707,14 @@ li.active {
     }
 }
 
+
 .widget {
-    padding: 1em 0;
+    padding: 1em 0; 
+    
+}
+
+.widget:first-child {
+    padding-top:0;   
 }
 
 /*********** HOME_CARUSEL_DRUŠTVA *******/

@@ -44,8 +44,17 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Do the right sidebar check -->
 		<!--  -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
+		<div class="col-md-4">
+				<!-- <h2 class="bg-secondary trake mb-0">POPULARNA TEME</h2> -->
+				<?php if (is_singular( 'fondovi' )): ?>
+						<?php  dynamic_sidebar('fondovi_pojedinacno')  ?>
+					
+					<?php elseif (is_singular( 'drustva' )) : ?>
+						<?php  dynamic_sidebar('drustva_upravljanje_pojedinacno')  ?>
+				<?php endif ?>
+				
+			</div>
+		
 	</div><!-- .row -->
 
 </div><!-- Container end -->

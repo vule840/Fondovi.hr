@@ -48,15 +48,77 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endwhile; wp_reset_query(); ?>
 				</div>
 				
-		
-		
+			</div>
+			<div class="col-md-4">
+				<h2 class="bg-secondary trake">NAJČITANIJE</h2>
+				<div class="jedan">
+					<?php
+							//argumenti
+							$args = array(
+								'post_type' => 'post',
+								'posts_per_page' => 1,
+																			'cat' => 11
+							);
+							//novi query
+							$query = new WP_Query($args);
+					while($query->have_posts()) : $query->the_post();
+					?>
+					<p><?php the_post_thumbnail(); ?></p>
+					
+					<div class="podnozje_naslova">
+						<div class="row">
+							<div class="col-md-9">
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							</div>
+							<div class="col-md-3">
+								<h4 class="kategorija"><?php the_category(); ?></h4>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					
+					<?php endwhile; wp_reset_query(); ?>
+				</div>
+				<div class="dva">
+					<?php
+							//argumenti
+							$args = array(
+								'post_type' => 'post',
+								'posts_per_page' => 1,
+																			'cat' => 12
+							);
+							//novi query
+							$query = new WP_Query($args);
+					while($query->have_posts()) : $query->the_post();
+					?>
+					<p><?php the_post_thumbnail(); ?></p>
+					
+					<div class="podnozje_naslova">
+						<div class="row">
+							<div class="col-md-9">
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							</div>
+							<div class="col-md-3">
+								<h4 class="kategorija"><?php the_category(); ?></h4>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					
+					<?php endwhile; wp_reset_query(); ?>
+				</div>
+			</div>
 			
-		
+		</div>
 		<!-- ****************************
 			POČETNA__2. INVESTICIJSKI FONDOVI
 		*******************************-->
-		
-			<div  id="pocetna_investicijski">
+		<div class="row" id="pocetna_investicijski">
+			<div class="col-md-8">
 				<h2 class="bg-primary trake">INVESTICIJSKI FONDOVI</h2>
 				<!-- Tabovi -->
 				<nav>
@@ -290,15 +352,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="tab-pane fade" id="nav-obveznicki" role="tabpanel" aria-labelledby="nav-obveznicki-tab">...</div>
 					<div class="tab-pane fade" id="nav-novcani" role="tabpanel" aria-labelledby="nav-novcani-tab">...</div>
 				</div>
-		
-		
-		
+			</div>
+			<div class="col-md-4"><img src="http://via.placeholder.com/350x500" alt=""></div>
+		</div>
 		<!-- ****************************
 						POČETNA__3. U FOKUSU
 		*******************************-->
-		
+		<div class="row">
 			
-			
+			<div class="col-md-8">
 				<h2 class="bg-primary trake">U FOKUSU</h2>
 				
 					
@@ -309,8 +371,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				'cat' => 10
 				));
 				if( $posts ): ?>
+				
 				<div class="row">
-				<?php foreach( $posts as $post ): 
+						
+					<?php foreach( $posts as $post ): 
 						
 						setup_postdata( $post );
 						
@@ -321,20 +385,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						</div>
 					<?php endforeach; ?>
+					
+					
 					</div>
-					
-					
 					<?php wp_reset_postdata(); ?>
 					
 					<?php endif; ?>
 				
-			
-
+			</div>
+			<div class="col-4"><h2 class="bg-secondary trake">TEČAJNA LISTA</h2></div>
+		</div>
 		<!-- ****************************
 						POČETNA__4. VIJESTI
 		*******************************-->
-		
-			<div  id='pocetna_vijesti'>
+		<div class="row" id='pocetna_vijesti'>
+			<div class="col-md-8">
 				<h2 class="bg-primary trake">VIJESTI</h2>
 				Ovdje ide carusel-vijesti
 				<!-- ************** -->
@@ -377,17 +442,125 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endif; ?>
 				</div>
 				<!-- ************** -->
-		
+				<!-- <div class="jedan hrvatska">
+					<?php
+					$posts = get_posts(array(
+						'posts_per_page'	=> 6,
+										'post_type'			=> 'post',
+					'cat' => 9
+					));
+					if( $posts ): ?>
+					
+					<div class="single-item">
+						
+						<?php foreach( $posts as $post ):
+							
+							setup_postdata( $post );
+							
+						?>
+						
+						
+						<div class="row">
+							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
+							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
+							 
+							
+						</div>
+						
+						
+						<?php endforeach; ?>
+						
+					</div>
+					
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				</div> -->
 				
-			
+				<!-- ************** -->
+				<!-- <div class="jedan regija">
+					<?php
+					$posts = get_posts(array(
+						'posts_per_page'	=> 6,
+										'post_type'			=> 'post',
+					'cat' => 11
+					));
+					if( $posts ): ?>
+					
+					<div class="single-item">
+						
+						<?php foreach( $posts as $post ):
+							
+							setup_postdata( $post );
+							
+						?>
+						
+						
+						<div class="row">
+							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
+							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
+							 
+							
+						</div>
+						
+						
+						<?php endforeach; ?>
+						
+					</div>
+					
+					<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+				</div> -->
+				
+			</div>
+			<div class="col-md-4" id="pojam_dana">
+				
+				
+				<h2 class="bg-secondary trake">POJAM DANA</h2>
+				
 
+		<?php
+
+          $ourCurrentPage = get_query_var('paged');
+
+          $aboutPosts = new WP_Query(array(
+            'posts_per_page'	=> 1,
+			'post_type'			=> 'pojam-dana',
+			'order' => 'ASC',
+            'paged' => $ourCurrentPage
+          ));
+
+	          if ($aboutPosts->have_posts()) :
+	            while ($aboutPosts->have_posts()) :
+	              $aboutPosts->the_post();
+	              ?> 
+
+	              <div class="pojam_dana">
+					<h2 class="color-secondary pojam_naslov"><?php the_title(); ?></h2>
+					<?php the_content(); ?> 
+					<button type="button" class="btn btn-primary text-uppercase"><a class="text-white" href="<?php bloginfo( 'url' ); ?>/pojam-dana">Pogledaj sve</a></button>
+				</div>
+	              <?php
+	            endwhile;
+
+	            /* echo paginate_links(array(
+	              'total' => $aboutPosts->max_num_pages
+	            ));*/
+
+	          endif;
+
+	        ?>
+						
+		
 			
-	
+			</div>
+		</div>
 		<!-- ****************************
 				POČETNA__5. DRUŠTVA ZA UPRAVLJANJE
 		*******************************-->
-		
-			<div id="logici">
+		<div class="row" id="logici">
+			<div class="col-md-8">
 				<h2 class="bg-primary trake">DRUŠTVA ZA UPRAVLJANJE</h2>
 				Ovdje ide carusel-logići
 
@@ -420,13 +593,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						</div>
 						<?php endforeach; ?>
-	
+
+					<!-- <?php 
+
+						$posts = get_field('povezane_vijesti_drustva');
+
+						if( $posts ): ?>
+						    <ul>
+						    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+						        <?php setup_postdata($post); ?>
+						        <li>
+						        	
+						            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						            
+						        </li>
+						    <?php endforeach; ?>
+						    </ul>
+						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+						<?php endif; ?> -->
+
+						
 						
 					</div>
 					
 					<?php wp_reset_postdata(); ?>
 					<?php endif; ?>
-	
+
+						
+
+
+				
 
 
 				<div class="multiple-items">
@@ -544,22 +740,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 				
-			
-			
-	
-				</div>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="fb-page" 
+  data-href="https://www.facebook.com/fondovi.hr"
+  data-width="380" 
+  data-hide-cover="false"
+  data-show-facepile="false"></div> <br>
+				Newsletter
+			</div>
+		</div>
 		
 
 			</div>
-			
-	</div>
-		
-				</div>
-				<div class="col-md-4">
-				
-					<?php  dynamic_sidebar('naslovna')  ?>
-				</div>
+
 				</div><!-- Container end -->
-		</div><!-- Wrapper end -->	
+				</div><!-- Wrapper end -->
+				
 				<?php get_footer(); ?>
 	        

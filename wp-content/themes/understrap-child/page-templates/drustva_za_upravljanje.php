@@ -113,12 +113,13 @@ endif;
 
 
 <div class="col-md-4">
-	<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
+	<!-- <h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2> -->
 	
-	<?php  dynamic_sidebar('vijesti-sidebar')  ?>
+	<?php  dynamic_sidebar('drustva_upravljanje')  ?>
 </div>
 
 </div>
+
 
 
 

@@ -15,6 +15,9 @@ jQuery(document).ready(function($) {
 	$(".tablica_edu:nth-child(odd)").each(function(index) {
 		$(this).addClass("tablica_sivo");
 	});
+	$(".tablica_leksikon:nth-child(odd)").each(function(index) {
+		$(this).addClass("tablica_sivo");
+	});
 	$(".single-drustva article h2").each(function(index) {
 		$(this).addClass("bg-primary trake text-uppercase");
 	});

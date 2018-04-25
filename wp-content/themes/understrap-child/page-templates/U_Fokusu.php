@@ -101,14 +101,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 			<div class="col-md-4">
-				<h2 class="bg-secondary trake mb-0">NAJČITANIJE</h2>
+				<h2 class="bg-secondary trake mb-0">POPULARNA TEME</h2>
 				
-				<?php  dynamic_sidebar('vijesti-sidebar')  ?>
+				<?php  dynamic_sidebar('ufokusu')  ?>
 			</div>
 			
 		</div>
 
-	
+
 	
 	
 		

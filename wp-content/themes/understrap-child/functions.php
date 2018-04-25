@@ -76,11 +76,20 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
      * Initializes themes widgets.
      */
     function understrap_widgets_init() {
-        register_sidebar( array(
+        /*register_sidebar( array(
             'name'          => __( 'Right Sidebar', 'understrap' ),
             'id'            => 'right-sidebar',
             'description'   => 'Right sidebar widget area',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );*/
+        register_sidebar( array(
+            'name'          => __( 'Naslovna', 'understrap' ),
+            'id'            => 'naslovna',
+            'description'   => 'naslovna widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="widget-title">',
             'after_title'   => '</h3>',
@@ -89,6 +98,52 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
             'name'          => __( 'Vijesti Sidebar', 'understrap' ),
             'id'            => 'vijesti-sidebar',
             'description'   => 'Vijesti sidebar widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+         
+         register_sidebar( array(
+            'name'          => __( 'U Fokusu', 'understrap' ),
+            'id'            => 'ufokusu',
+            'description'   => 'ufokusu widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+          register_sidebar( array(
+            'name'          => __( 'Edukacija', 'understrap' ),
+            'id'            => 'edukacija',
+            'description'   => 'edukacija widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+          register_sidebar( array(
+            'name'          => __( 'Drustva_upravljanje', 'understrap' ),
+            'id'            => 'drustva_upravljanje',
+            'description'   => 'drustva_upravljanje widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+          register_sidebar( array(
+            'name'          => __( 'Drustva_upravljanje_pojedinacno', 'understrap' ),
+            'id'            => 'drustva_upravljanje_pojedinacno',
+            'description'   => 'Drustva_upravljanje_pojedinacno widget area',
+            'before_widget' => '<aside id="%1$s" class="widget">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+          register_sidebar( array(
+            'name'          => __( 'fondovi_pojedinacno', 'understrap' ),
+            'id'            => 'fondovi_pojedinacno',
+            'description'   => 'fondovi_pojedinacno widget area',
             'before_widget' => '<aside id="%1$s" class="widget">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="widget-title">',
@@ -105,7 +160,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
             'after_title'   => '</h3>',
         ) );
 
-        register_sidebar( array(
+        /*register_sidebar( array(
             'name'          => __( 'Hero Slider', 'understrap' ),
             'id'            => 'hero',
             'description'   => 'Hero slider area. Place two or more widgets here and they will slide!',
@@ -123,7 +178,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
             'after_widget'   => '</div><!-- .static-hero-widget -->', 
             'before_title'   => '<h3 class="widget-title">', 
             'after_title'    => '</h3>',
-        ) );
+        ) );*/
 
         register_sidebar( array(
             'name'          => __( 'Footer Full', 'understrap' ),
@@ -682,4 +737,9 @@ add_action('widgets_init', 'my_recent_widget_registration');
 function my_acf_init() {
   acf_update_setting('google_api_key', 'AIzaSyDxSSFvDIr5NGKiDtEIF7u0fCVpbDcOOeY');
 }
-add_action('acf/init', 'my_acf_init');        
+add_action('acf/init', 'my_acf_init'); 
+
+
+
+
+       
