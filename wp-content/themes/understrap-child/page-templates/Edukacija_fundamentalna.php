@@ -29,6 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           $aboutPosts = new WP_Query(array(
             'posts_per_page'	=> 2,
 			'post_type'			=> 'edufundanaliza',
+			
 			'order' => 'ASC',
             'paged' => $ourCurrentPage
           ));

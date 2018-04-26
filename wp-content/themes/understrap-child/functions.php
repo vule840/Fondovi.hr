@@ -29,7 +29,7 @@ function theme_enqueue_styles() {
 
 add_image_size( 'category-thumb', 730, 587 ); //300 pixels wide (and unlimited height)
 add_image_size( 'vijesti', 200, 200 , true); //300 pixels wide (and unlimited height)
-
+add_image_size( 'mala', array(100,100,crop)); //300 pixels wide (and unlimited height)
 
 /**
  * Count number of widgets in a sidebar

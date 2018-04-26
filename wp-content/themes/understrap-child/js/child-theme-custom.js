@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
 		$(this).data("isopen", !open);
 	});*/
 
+	$("#nav-tab a").on("click", function(e) {
+		e.preventDefault();
+		$(this).tab("show");
+	});
+
 	$(".tablica_edu:nth-child(odd)").each(function(index) {
 		$(this).addClass("tablica_sivo");
 	});

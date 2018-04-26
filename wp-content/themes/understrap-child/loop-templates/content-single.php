@@ -20,7 +20,7 @@
 
 						<div class="row" id="single_post_naslov">
 									<div class="col-md-9">
-										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+										<h2 class="mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 									</div>
 									<div class="col-md-3">
 										<h4 class="kategorija"><?php the_category(); ?><i class="fa fa-square kvadrat_kategorije" aria-hidden="true"></i></h4>

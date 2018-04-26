@@ -56,7 +56,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				$posts = get_posts(array(
 					'posts_per_page'	=> 4,
 					'post_type'			=> 'post',
-					'cat' => 12
+					'cat' => 12,
+					'offset' =>  1
 				));
 
 				if( $posts ): ?>
@@ -88,10 +89,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		          $ourCurrentPage = get_query_var('paged');
 
 		          $aboutPosts = new WP_Query(array(
-		            'posts_per_page'	=> 3,
+		            'posts_per_page'	=> 5,
 					'post_type'			=> 'post',
 					'cat' => 12,
-					'order' => 'ASC',
+					'offset' => 5,
+					'order' => 'DESC',
 		            'paged' => $ourCurrentPage
 		          ));
 

@@ -299,7 +299,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		
 			
 			
-				<h2 class="bg-primary trake">U FOKUSU</h2>
+				<h2 class="bg-primary trake mt-4">U FOKUSU</h2>
 				
 					
 				<?php
@@ -363,9 +363,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="row">
 							<div class="col-md-12"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('vijesti'); ?></a></div>
 							<div class="col-md-12"><h2 class="naslov"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2></div>
+							
 							<div class="col-md-12 text-right pt-3"> <?php the_category(); ?></div>
 							 
-							
 						</div>
 						
 						
@@ -408,13 +408,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						<div>
 							<?php 
-						$image = get_field('drustva_logo');
+								$image = get_field('drustva_logo');
+								$size = 'thumbnail';
+								$thumb = $image['sizes'][ $size ];
+									if( !empty($image) ): ?>
+										<!-- <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> -->
 
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>	
-						<a href="<?php the_permalink( ); ?>">Profil</a><br>
-						<a href="<?php the_permalink( ); ?>">Kontakt</a>
+										<div class="home_slider_slika">
+											<a  href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+
+											<img class="mx-auto d-block" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+										</a>
+										</div>
+										
+									<?php endif; ?>	
+
+						
+
+						<div class="home_slider_profil">
+							<p><i class="fa fa-home" aria-hidden="true"></i> <a href="<?php the_permalink( ); ?>">Profil</a></p>
+						<p><i class="fa fa-info" aria-hidden="true"></i> <a href="#">Fondovi</a> </p>
+						<p><i class="fa fa-rss" aria-hidden="true"></i> <a href="#">Novosti</a> </p>
+						<p><i class="fa fa-envelope" aria-hidden="true"></i>  <a href="<?php the_permalink( ); ?>">Kontakt</a></p>
+						
+
+						</div>
+
+						
+						
 						
 
 
@@ -563,3 +585,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- Wrapper end -->	
 				<?php get_footer(); ?>
 	        
+        

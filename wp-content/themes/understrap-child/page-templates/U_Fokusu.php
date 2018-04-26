@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		          $ourCurrentPage = get_query_var('paged');
 
 		          $aboutPosts = new WP_Query(array(
-		            'posts_per_page'	=> 3,
+		            'posts_per_page'	=> 5,
 					'post_type'			=> 'post',
 					'cat' => 10,
 					'order' => 'ASC',
@@ -83,12 +83,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 						                
 						          
 						           </table>	
+
 			              <?php
 			            endwhile;
 
-			             echo paginate_links(array(
-			              'total' => $aboutPosts->max_num_pages
+
+			             echo
+
+			              paginate_links(array(
+			              'total' => $aboutPosts->max_num_pages,
+			              'before_page_number' => '<span class="screen-reader-text">',
+			              'after_page_number'  => '</span>'
+			          
 			            ));
+
 
 			          endif;
 

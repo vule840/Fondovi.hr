@@ -200,7 +200,14 @@ li.active {
     background: #eceded;
 }
 .tablica_objave td {
-    padding: 0em 0.75em 0em 0em;
+    padding: 0em 1.5em 0em 0em;
+    img{
+        filter: brightness(80%);
+
+    }
+    a{
+        font-size: 0.8em;
+    }
 }
 #recent-posts-3 {
     padding: 0;
@@ -284,6 +291,30 @@ li.active {
 .kvadrat_kategorije {
     color: $primary;
         padding-left: 0.4rem;
+}
+.category-regija {
+    div#single_post_naslov .kategorija a{
+        color: #97BF0D;
+    }
+    a{
+        color: #97BF0D;
+    }
+    .kvadrat_kategorije{
+        color: #97BF0D;
+    }
+    
+}
+.category-svijet {
+    div#single_post_naslov .kategorija a{
+        color: #FFED00;
+    }
+    a{
+         color: #FFED00;
+    }
+    .kvadrat_kategorije{
+        color: #FFED00;
+    }
+    
 }
 //H2 SINGLE KATEGORIJA
 .single {
@@ -378,10 +409,11 @@ li.active {
 
 .prvi {
     position: relative;
+    margin-bottom: 2rem;
     .podnozje_naslova {
         position: absolute;
         bottom: 0;
-        padding: 1em;
+        padding: 1.3em;
         width: 100%;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
         background: -moz-linear-gradient(
@@ -691,6 +723,9 @@ li.active {
     .card-body {
         padding: 0.5em;
     }
+    /*.slick-slide{
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }*/
 }
 
 /*********** VIJESTI_4POSTA *******/
@@ -767,6 +802,32 @@ tbody#drustva_tablica {
     }
 }
 
+.category .entry-header h2.entry-title{
+    margin-bottom: 0;
+}
+.category .post{
+    padding-bottom: 1.7rem;
+}
+.category .entry-header .entry-meta{
+    padding: 1rem 0rem;
+}
+
+/*********** LSLIKE 100% U KATEGORIJAMA ****/
+.category img.wp-post-image, .category article img {
+  
+    width: 100%;
+}
+
+/*********** PGINATE LINKS *******/
+  span.page-numbers.current {
+   /* padding-left: 40%;*/
+    padding-top: 6%;
+    display: inline-block;
+    /* padding-top: 8%; */
+}
+.page-numbers{
+    padding: 0 0.3rem;
+}
 /*********** FOOTER *******/
 
 div#wrapper-footer {
@@ -785,6 +846,22 @@ div#wrapper-footer {
     z-index: 10;
 }
 
+    
+    .home_slider_slika{
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        padding: 2rem;
+    }
+
+.home_slider_profil  {
+       border: 1px solid rgba(0, 0, 0, 0.125);
+       padding: 1.5rem;
+    p{
+       padding-left: 20%;
+    margin-bottom: 0.5rem; 
+    }
+    
+
+}
 .ufokusu {
     .slick-slide .post-categories {
         li {
@@ -1192,7 +1269,16 @@ div#wrapper-footer {
         FOOTER LINKOVI
 
  *********************/
+.letter{
+    background: #009EE0;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: light;
+}
+
+
 #wrapper-footer-full{
+
     #nav_menu-2,#nav_menu-3{
         border-left: 1px solid #fff;
     }
@@ -1212,4 +1298,7 @@ div#wrapper-footer {
         }
         
    
+}
+#full-width-page-wrapper{
+    padding-bottom: 0;
 }

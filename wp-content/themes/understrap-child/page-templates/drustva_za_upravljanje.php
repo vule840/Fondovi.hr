@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$ourCurrentPage = get_query_var('paged');
 
 					$aboutPosts = new WP_Query(array(
-						'posts_per_page'	=> 2,
+						'posts_per_page'	=> 10,
 						'post_type'			=> 'drustva',
 						'order' => 'ASC',
 						'paged' => $ourCurrentPage
@@ -44,11 +44,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<td><a class="drustvo_upravljanje" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 										<td class="text-right"> <?php 
 
-										$image = get_field('logo');
+										//$image = get_field('logo');
+										$image = get_field('drustva_logo');
+										$size = 'mala';
+										$thumb = $image['sizes'][ $size ];
 
 										if( !empty($image) ): ?>
 
-										<img  src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<a  href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+
+											<img class="mx-auto d-block" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+
+										</a>		
+										<!-- <img  src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> -->
 
 									<?php endif; ?></td>
 									

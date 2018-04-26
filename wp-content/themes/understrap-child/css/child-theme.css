@@ -9611,7 +9611,11 @@ li.active {
   background: #eceded; }
 
 .tablica_objave td {
-  padding: 0em 0.75em 0em 0em; }
+  padding: 0em 1.5em 0em 0em; }
+  .tablica_objave td img {
+    filter: brightness(80%); }
+  .tablica_objave td a {
+    font-size: 0.8em; }
 
 #recent-posts-3 {
   padding: 0; }
@@ -9684,6 +9688,24 @@ li.active {
   color: #B7151F;
   padding-left: 0.4rem; }
 
+.category-regija div#single_post_naslov .kategorija a {
+  color: #97BF0D; }
+
+.category-regija a {
+  color: #97BF0D; }
+
+.category-regija .kvadrat_kategorije {
+  color: #97BF0D; }
+
+.category-svijet div#single_post_naslov .kategorija a {
+  color: #FFED00; }
+
+.category-svijet a {
+  color: #FFED00; }
+
+.category-svijet .kvadrat_kategorije {
+  color: #FFED00; }
+
 .single #single_post_naslov {
   padding: 1em 0; }
   .single #single_post_naslov h2 {
@@ -9742,11 +9764,12 @@ li.active {
   padding: 2em; }
 
 .prvi {
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   .prvi .podnozje_naslova {
     position: absolute;
     bottom: 0;
-    padding: 1em;
+    padding: 1.3em;
     width: 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+100 */
     background: -moz-linear-gradient(top, transparent 0%, transparent 1%, rgba(0, 0, 0, 0.65) 100%);
@@ -9944,12 +9967,15 @@ li.active {
   padding: 2em; }
 
 /*********** HOME_LOGIĆI *******/
-#logici .card-img-top {
-  padding: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-
-#logici .card-body {
-  padding: 0.5em; }
+#logici {
+  /*.slick-slide{
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }*/ }
+  #logici .card-img-top {
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  #logici .card-body {
+    padding: 0.5em; }
 
 /*********** VIJESTI_4POSTA *******/
 #vijesti_4posta {
@@ -10002,6 +10028,29 @@ tbody#drustva_tablica {
     tbody#drustva_tablica .drustvo_upravljanje:hover {
       color: #B7151F; }
 
+.category .entry-header h2.entry-title {
+  margin-bottom: 0; }
+
+.category .post {
+  padding-bottom: 1.7rem; }
+
+.category .entry-header .entry-meta {
+  padding: 1rem 0rem; }
+
+/*********** LSLIKE 100% U KATEGORIJAMA ****/
+.category img.wp-post-image, .category article img {
+  width: 100%; }
+
+/*********** PGINATE LINKS *******/
+span.page-numbers.current {
+  /* padding-left: 40%;*/
+  padding-top: 6%;
+  display: inline-block;
+  /* padding-top: 8%; */ }
+
+.page-numbers {
+  padding: 0 0.3rem; }
+
 /*********** FOOTER *******/
 div#wrapper-footer {
   background: #5d5d5d; }
@@ -10014,6 +10063,17 @@ div#wrapper-footer {
 .slick-prev,
 .slick-next {
   z-index: 10; }
+
+.home_slider_slika {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 2rem; }
+
+.home_slider_profil {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1.5rem; }
+  .home_slider_profil p {
+    padding-left: 20%;
+    margin-bottom: 0.5rem; }
 
 .ufokusu .slick-slide .post-categories li:after {
   content: "\f0c8";
@@ -10366,6 +10426,12 @@ div#wrapper-footer {
         FOOTER LINKOVI
 
  *********************/
+.letter {
+  background: #009EE0;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: light; }
+
 #wrapper-footer-full #nav_menu-2, #wrapper-footer-full #nav_menu-3 {
   border-left: 1px solid #fff; }
 
@@ -10376,3 +10442,6 @@ div#wrapper-footer {
     color: #fff; }
     #wrapper-footer-full ul.menu li a:hover {
       text-shadow: 0 0 0.9px #fff, 0 0 0.9px #fff, 0 0 0.9px #fff; }
+
+#full-width-page-wrapper {
+  padding-bottom: 0; }
